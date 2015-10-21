@@ -1,5 +1,5 @@
-(function () {
-// Screen change routines
+(function() {
+    // Screen change routines
 
     function goScreen(id) {
 
@@ -31,10 +31,10 @@
         goScreen("error-screen");
     }
 
-// Subscribing routines
+    // Subscribing routines
 
     function getWantedLists() {
-        var wantedLists = $('.mailing-list:checked').map(function () {
+        var wantedLists = $('.mailing-list:checked').map(function() {
             return this.value;
         }).get();
 
@@ -43,7 +43,9 @@
 
     function doSubscribe() {
         var wantedLists = getWantedLists();
-        var data = { email: $("#email").val() };
+        var data = {
+            email: $("#email").val()
+        };
 
         console.log("Subscribing to: ");
         console.log(wantedLists);
@@ -53,7 +55,7 @@
         async.eachSeries(
             wantedLists,
 
-            function (item, callback) {
+            function(item, callback) {
 
                 var url = "https://lists.mozilla.org/subscribe/" + item;
 
@@ -72,13 +74,13 @@
                     xhrFields: {
                         mozSystem: true
                     },
-                    success: function (data, msg) {
+                    success: function(data, msg) {
                         console.log("!success!");
                         console.log("msg", msg);
                         callback(null, msg);
                         return true;
                     },
-                    error: function (xhr, msg) {
+                    error: function(xhr, msg) {
 
                         /*
                         Be aware that due to some funkyness by mailman, jQuery is triggering the error callback even
@@ -111,8 +113,13 @@
 
     }
 
-// Start app
-    console.log("Starting app...");
-    goSignUpScreen();
+    function init() {
+        // Start app
+        console.log("Starting app...");
+        goSignUpScreen();
+    }
+
+    init();
+
 
 }());

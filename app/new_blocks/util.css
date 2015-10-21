@@ -1,3 +1,4 @@
+
 /* Feel free to add any useful code */
 /* This will help you scroll just the content of your app. Eg:
   <header class="fixed">
@@ -82,7 +83,7 @@ section[role="region"] .content [data-type="list"] header {
 
 [data-type="list"] li p,
 [data-type="list"] li p:first-of-type {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem ;
 }
 
 

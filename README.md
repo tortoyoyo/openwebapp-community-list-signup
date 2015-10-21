@@ -5,6 +5,27 @@ Currently this application can only subscribe to mailing lists hosted in the Moz
 
 The app cannot verify if the email is real and if the subscription process went through. It will only verify if mailman responded with 200 OK.
 
+# Como rodar no Cordova
+
+Para executar o app é preciso que o Apache Cordova esta instalado, caso ainda não esteja execute:
+```
+# npm install cordova -g
+```
+
+Depois de instalado o Cordova vá na pasta raiz do projeto e baixe as dependências dos Nodejs
+
+```
+npm install
+```
+
+Ele ira automaticamente criar o projeto Cordova e inserir a plataforma Android. Para executar o projeto no emulador do Android, basta digitar:
+
+```
+npm run android
+```
+
+Para alterar o cód. basta alterar as informações que estão na pasta app, evitando assim de mexer no Apache Cordova.
+
 # How to add it to your Firefox OS device
 
 Use the Web IDE to add an **packeg open web app** and select the manifest file inside the app folder.

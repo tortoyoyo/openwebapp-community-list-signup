@@ -207,6 +207,7 @@ li a:active {
 /* Edit mode */
 [data-type="list"] [data-type="edit"] li {
   -moz-padding-start: 4rem;
+  -webkit-padding-start: 4rem;
 }
 
 [data-type="list"] [data-type="edit"] li > .pack-checkbox,
@@ -243,4 +244,3 @@ html[dir="rtl"] [data-type="list"] aside {
 html[dir="rtl"] [data-type="list"] aside.pack-end {
   float: left;
 }
-

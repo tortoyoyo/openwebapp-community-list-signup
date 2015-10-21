@@ -2,12 +2,20 @@
   "name": "CommunitySignUp",
   "version": "0.1.0",
   "description": "App to sign up for community list",
+  "scripts": {
+    "install": "npm run cordova-install && npm run android-install",
+    "cordova-install":"cordova create cordova org.mozillabrazil.openwebappcommunitylistsignup OpenWebAppCommunityListSignup",
+    "android-install": "cd cordova && cordova platform add android",
+    "android": "gulp copy && cd cordova && cordova run android",
+    "serve": "gulp & cd app && http-server"
+  },
   "dependencies": {},
   "devDependencies": {
-    "gulp-wrap": "^0.11.0",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
     "gulp-declare": "^0.3.0",
     "gulp-handlebars": "^4.0.0",
-    "gulp-concat": "^2.6.0",
-    "gulp": "^3.9.0"
+    "gulp-wrap": "^0.11.0"
   }
 }
